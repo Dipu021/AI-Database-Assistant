@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+groq
+sqlalchemy
+psycopg2-binary
+pymysql
+pymongo
+python-dotenv
+pydantic
+jinja2

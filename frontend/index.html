@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Database Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/static/assets/logo.png" alt="Logo" width="40">
+                <h1>AI DB Assistant</h1>
+            </div>
+            
+            <div class="connection-form">
+                <h3>Database Connection</h3>
+                <label>Database Type</label>
+                <select id="db-type" onchange="updateFields()">
+                    <option value="PostgreSQL">PostgreSQL</option>
+                    <option value="MySQL">MySQL</option>
+                    <option value="SQLite">SQLite</option>
+                    <option value="MongoDB">MongoDB</option>
+                </select>
+                
+                <div id="fields"></div>
+                
+                <button onclick="connectDB()">Connect</button>
+            </div>
+            
+            <div id="status" class="status"></div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="main">
+            <header>
+                <h2>AI Database Assistant</h2>
+            </header>
+            
+            <div id="chat" class="chat-area"></div>
+            
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask about your database...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script src="/static/components/chat.js"></script>
+</body>
+</html>

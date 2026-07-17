@@ -49,7 +49,8 @@ Run the container:
 docker run --rm -p 8000:8000 --env-file .env ai-database-assistant
 ```
 
-For database connections inside Docker, use `host.docker.internal` as the host value so the container can reach services running on your host machine. For local development, use `localhost`.
+For database connections inside Docker, use `host.docker.internal` as the host value so the container can reach services running on your host machine. For local development, use `localhost`.Also while using the docker , 
+the you must write *"http://localhost:8000"*
 
 Then visit http://localhost:8000/ to use the app.
 
